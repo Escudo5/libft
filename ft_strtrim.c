@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: smarquez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 17:33:44 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/23 17:11:21 by smarquez         ###   ########.fr       */
+/*   Created: 2024/09/23 16:47:27 by smarquez          #+#    #+#             */
+/*   Updated: 2024/09/23 17:08:19 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char a)
+#include <stdlib.h>
+#include <string.h>
+
+char *ft_strtrim(char const *s1, char const *set)
 {
-	if (a >= '0' && a <= '9')
-		return (1);
-	else
-		return (0);
-}
+	if (s1 == NULL || set == NULL)
+		return (NULL);
+	size_t s1_len;
+	size_t set_len;
+
+	s1_len = strlen(s1);
+	set_len = strlen(set);
+
+
