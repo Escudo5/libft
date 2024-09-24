@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smarquez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 11:33:02 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/24 10:30:26 by smarquez         ###   ########.fr       */
+/*   Created: 2024/09/24 10:31:07 by smarquez          #+#    #+#             */
+/*   Updated: 2024/09/24 10:33:10 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFT_H
+#define LIBFT_H
 
-int	ft_strlen(const char *str)
-{
-	size_t	i;
+#include <stddef.h>
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
+	size_t ft_strlen(const char *str);
+
+
+
+
+
+
+
+
+
+
+
+
+#endif
