@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smarquez <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 16:47:27 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/24 11:10:51 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/24 17:11:33 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
+#include <string.h> 
 
 char *ft_strtrim(char const *s1, char const *set)
 {
@@ -37,13 +38,15 @@ char *ft_strtrim(char const *s1, char const *set)
 		end--;
 	}
 
-	size_t new_lenght;
-	new_lenght = end - start + 1;
-
+	size_t new_length;
+	new_length = end - start + 1;
+	
+	size_t i = 0;
+	
 	char *trimmed_str = malloc((new_length + 1) * sizeof(char));
 	if (trimmed_str == NULL)
 		return (NULL);
-
+	
 	while (i < new_length)
 	{
 		trimmed_str[i] = s1[start + i];
