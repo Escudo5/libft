@@ -6,7 +6,7 @@
 /*   By: smarquez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 11:33:02 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/24 10:30:26 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/24 11:16:37 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,16 @@ int	ft_strlen(const char *str)
 		i++;
 	}
 	return (i);
+}
+
+#include "libft.h"
+#include <stdio.h>
+
+int main(void)
+{
+	const char *test_str = "Hello world";
+	size_t len;
+	len = ft_strlen(test_str);
+	printf("longitud es %zu\n", test_str, len);
+	return (0);
 }
