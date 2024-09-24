@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smarquez <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:20:10 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/17 15:42:06 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/24 12:36:44 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 	       return(dest);
 	if (d < s || d >= s + n)
 	{
-	while (n--)
-	*d++ = *s++;
+		while (n--)
+		*d++ = *s++;
 	}
 	else
 	{
