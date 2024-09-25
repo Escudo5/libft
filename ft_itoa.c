@@ -6,12 +6,14 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 16:20:07 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/24 17:36:26 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/25 13:45:57 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
+#include <string.h> // Add this line to include the header file that declares ft_strdup
+
 int ft_count_length(int n)
 {
     int len;
@@ -26,6 +28,8 @@ int ft_count_length(int n)
     }
     return (len);
 }
+char *ft_strdup(const char *s);
+
 char *ft_itoa(int n)
 {
     if (n == -2147483648)
@@ -35,8 +39,7 @@ char *ft_itoa(int n)
     int len;
     char *str;
     int sign;
-
-    len = ft_count_lenght(n);
+    len = ft_count_length(n);
     str = (char *)malloc(sizeof(char) * len + 1);
     if (!str)
         return (NULL);
@@ -52,4 +55,13 @@ char *ft_itoa(int n)
     if (sign < 0)
         str[0] = '-';
     return (str);
+}
+
+#include <stdio.h>
+int main()
+{
+    int n;
+    n = 15547468;
+    printf("%s\n", ft_itoa(n));
+    return (0);
 }
