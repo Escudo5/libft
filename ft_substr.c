@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 13:28:08 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/25 13:12:34 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/25 14:13:37 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 
 char *ft_substr(const char *s, unsigned int start, size_t len)
 {
-    size_t s_len;
+    size_t s_len = strlen(s);
     char *substr;
     size_t i;
 
     if (s == NULL)
         return (NULL);
     i = 0;
-    while (i != '\0')
+    while (s[i] != '\0')
 	    i++;
     if (start >= s_len)
         len = 0;
@@ -45,7 +45,7 @@ char *ft_substr(const char *s, unsigned int start, size_t len)
 int main()
 {
     char *str = "Hello World";
-    printf("%s\n", ft_substr(str, 5, 5));
+    printf("%s\n", ft_substr(str, 14, 5));
     return 0;
 }
 	
