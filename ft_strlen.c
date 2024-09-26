@@ -6,11 +6,10 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 11:33:02 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/24 13:07:45 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/26 16:48:19 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 size_t	ft_strlen(const char *str)
