@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 09:51:32 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/26 11:26:44 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/26 13:02:58 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,26 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     new_string[i] = '\0';
 }
 
-int main()
-{
-    char [] = "Hola mundo";
-    
+#include "libft.h"
+#include <stdio.h>
+#include <stddef.h>
+
+// Función de transformación
+char transform_function(unsigned int index, char c) {
+    return c + 1; // Por ejemplo, transforma cada carácter sumando 1 a su valor ASCII
+}
+
+int main() {
+    char *original_string = "Hola"; // Cadena de prueba
+    char *result = ft_strmapi(original_string, transform_function); // Llama a ft_strmapi
+
+    if (result != NULL) {
+        printf("Cadena original: %s\n", original_string);
+        printf("Cadena transformada: %s\n", result);
+        free(result); // No olvides liberar la memoria asignada
+    } else {
+        printf("Error al transformar la cadena.\n");
+    }
+
+    return 0;
 }
