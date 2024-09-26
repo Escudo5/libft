@@ -6,28 +6,29 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 15:09:06 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/26 12:21:33 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/26 17:02:13 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
+	int	sign;
+	int	result;
+
 	while (*nptr == ' ')
 		nptr++;
-	int sign;
 	sign = 1;
 	if (*nptr == '-')
-	{	
+	{
 		sign = -1;
 		nptr++;
 	}
 	if (*nptr == '+')
-	{	
+	{
 		nptr++;
 	}
-	int result;
 	result = 0;
 	while (*nptr >= '0' && *nptr <= '9')
 	{
@@ -37,9 +38,9 @@ int ft_atoi(const char *nptr)
 	return (sign * result);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 
-int main()
+int	main(void)
 {
 	const char s1[] = "awsjj8675kbddw";
 	int result;
@@ -47,3 +48,4 @@ int main()
 	printf("%d", result);
 	return (0);
 }
+*/
