@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 09:51:32 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/26 11:26:44 by smarquez         ###   ########.fr       */
+/*   Created: 2024/09/26 10:46:47 by smarquez          #+#    #+#             */
+/*   Updated: 2024/09/26 11:24:19 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stddef.h>
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void ft_putstr_fd(char *s, int fd)
 {
-    if (s == NULL || f == NULL)
-        return (NULL);
-    size_t s_len;
-    s_len = ft_strlen(s);
-    size_t  i;
-    i = 0;
-    char* new_string;
-    new_string = (char *)malloc((s_len + 1) * sizeof(char));
-    if (new_string == NULL)
-        return (NULL);
-    while (i < s_len)
+    if (s == NULL)
+        return;
+        size_t i;
+        i = 0;
+    while (s[i] != '\0')
     {
-        new_string[i] = f(i, s[i]);
+        ft_putchar_fd(s[i], fd);
         i++;
     }
-    new_string[i] = '\0';
-}
-
-int main()
-{
-    char [] = "Hola mundo";
-    
 }
