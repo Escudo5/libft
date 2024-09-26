@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smarquez <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 16:41:25 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/19 17:45:21 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/26 12:31:00 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,31 @@ void *ft_calloc(size_t nmemb, size_t size)
 
 	return(ptr);
 }
+
+#include <stdio.h>
+int main()
+{
+    size_t count = 5; // Número de elementos
+    size_t size = sizeof(int); // Tamaño de cada elemento (un entero)
+
+    // Llama a ft_calloc para asignar memoria
+    int *array = (int *)ft_calloc(count, size);
+    if (array == NULL)
+    {
+        printf("Error en la asignación de memoria\n");
+        return 1; // Retorna un código de error si la asignación falla
+    }
+
+    // Muestra los valores iniciales del array
+    printf("Array inicializado con calloc:\n");
+    for (size_t i = 0; i < count; i++)
+    {
+        printf("array[%zu] = %d\n", i, array[i]); // Debería mostrar 0 para cada elemento
+    }
+
+    // Libera la memoria asignada
+    free(array);
+
+    return 0; // Termina el programa correctamente
+}
+
