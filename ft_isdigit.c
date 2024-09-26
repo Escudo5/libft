@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 17:33:44 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/24 13:35:30 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/26 17:06:15 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_isdigit(char a)
 		return (0);
 }
 
-#include <stdio.h>
+/* #include <stdio.h>
 #include "libft.h"
 int main(void)
 {
@@ -26,3 +26,4 @@ int main(void)
 	printf("'%c' is %s\n", a, ft_isdigit(a) ? "digit" : "not digit");
 	return 0;
 }
+*/
