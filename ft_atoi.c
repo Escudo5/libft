@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 15:09:06 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/26 17:02:13 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/27 12:05:19 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_atoi(const char *nptr)
 		sign = -1;
 		nptr++;
 	}
-	if (*nptr == '+')
+	else if (*nptr == '+')
 	{
 		nptr++;
 	}
@@ -38,14 +38,13 @@ int	ft_atoi(const char *nptr)
 	return (sign * result);
 }
 
-/*#include <stdio.h>
+#include <stdio.h>
 
 int	main(void)
 {
-	const char s1[] = "awsjj8675kbddw";
+	const char s1[] = "  p      -86p75";
 	int result;
 	result = ft_atoi(s1);
 	printf("%d", result);
 	return (0);
 }
-*/

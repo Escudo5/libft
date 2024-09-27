@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 10:31:07 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/26 16:11:38 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/27 12:20:58 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void    *ft_memset(void *b, int c, size_t len);
 void    ft_bzero(void *s, size_t n);
 void    *ft_memcpy(void *dst, const void *src, size_t n);
 void    *ft_memmove(void *dst, const void *src, size_t len);
-size_t  ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t  ft_strlcpy(char *dest, const char *src, size_t size);
 size_t  ft_strlcat(char *dst, const char *src, size_t dstsize);
 int     ft_toupper(int c);
 int     ft_tolower(int c);
