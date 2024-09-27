@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smarquez <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 15:35:58 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/19 15:56:59 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/27 14:46:32 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stddef.h>
+#include <string.h>
 
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char *ptr;
-	ptr = (unsigned char *)s;
-	unsigned char target;
-	target = (unsigned char)c;
+	unsigned char	*ptr;
+	unsigned char	target;
 
+	ptr = (unsigned char *)s;
+	target = (unsigned char)c;
 	while (n--)
 	{
 		if (*ptr == target)
@@ -28,4 +28,3 @@ void *ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-

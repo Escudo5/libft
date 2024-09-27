@@ -3,22 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smarquez <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 14:45:55 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/19 15:05:27 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/27 15:17:59 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include "libft.h"
 
-char *ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	if ( *little == '\0')
-		return (char *)big;
+	size_t	i;
+
+	if (*little == '\0')
+		return ((char *)big);
 	if (len == 0)
 		return (NULL);
-	size_t i;
 	i = 0;
 	while (i != '\0')
 	{
@@ -26,12 +28,10 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
 		{
 			i++;
 		}
-
-	if (little[i] == '\0' && i <= len) 
-		return( char*)big;
-	big++;
-	len--;
+		if (little[i] == '\0' && i <= len)
+			return ((char *)big);
+		big++;
+		len--;
 	}
 	return (NULL);
 }
-

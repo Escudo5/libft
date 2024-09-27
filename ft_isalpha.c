@@ -6,9 +6,12 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 17:13:39 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/24 13:17:05 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/27 14:40:10 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+#include <stdio.h>
 
 int	ft_isalpha(char a)
 {
@@ -18,12 +21,11 @@ int	ft_isalpha(char a)
 		return (0);
 }
 
-#include <stdio.h>
-#include "libft.h"
+/*
 int main(void)
 {
 	char a = 'a';
 	printf("'%c'", a);
 	return 0;
 }
-
+*/

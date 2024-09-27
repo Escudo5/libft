@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 11:33:02 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/27 12:27:57 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/27 15:12:58 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,11 @@ size_t	ft_strlen(const char *str)
 	return (i);
 }
 
-#include "libft.h"
-#include <stdio.h>
-
 /*int main(void)
 {
-	const char *test_str = "Hello world";
-	size_t len;
+	const char	*test_str = "Hello world";
+	size_t		len;
+
 	len = ft_strlen(test_str);
 	printf(" %zu\n", len);
 	return (0);

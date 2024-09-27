@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 16:20:07 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/26 17:05:12 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/27 14:43:32 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,7 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-#include <stdio.h>
-
+/*
 int	main(void)
 {
 	int n;
@@ -68,3 +67,4 @@ int	main(void)
 	printf("%s\n", ft_itoa(n));
 	return (0);
 }
+*/

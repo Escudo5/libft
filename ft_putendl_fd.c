@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 11:25:07 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/26 11:37:16 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/27 14:55:43 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 #include <stddef.h>
 #include <unistd.h>
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-    if (s == NULL)
-        return;
-    ft_putstr_fd(s, fd);
-    write(fd,"\n", 1);
+	if (s == NULL)
+		return ;
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
 }

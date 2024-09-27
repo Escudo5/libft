@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 15:09:06 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/27 12:05:19 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/27 14:34:16 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_atoi(const char *nptr)
 	return (sign * result);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int	main(void)
 {
@@ -48,3 +48,4 @@ int	main(void)
 	printf("%d", result);
 	return (0);
 }
+*/

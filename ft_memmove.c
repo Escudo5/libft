@@ -6,31 +6,31 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:20:10 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/24 12:36:44 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/27 14:53:26 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stddef.h>
+#include <string.h>
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char *d;
-	const unsigned char *s;
+	unsigned char		*d;
+	const unsigned char	*s;
+
 	d = (unsigned char *)dest;
 	s = (const unsigned char *)src;
-
 	if (d == s)
-	       return(dest);
+		return (dest);
 	if (d < s || d >= s + n)
 	{
 		while (n--)
-		*d++ = *s++;
+			*d++ = *s++;
 	}
 	else
 	{
 		d += n;
-		s += n;	
+		s += n;
 		while (n--)
 			*(--d) = *(--s);
 	}

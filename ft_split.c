@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 15:43:12 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/27 12:18:48 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/27 15:01:13 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,14 @@
 
 char	**ft_split(char const *s, char c)
 {
-	size_t i;
+	size_t	i;
+	size_t	word_count;
+	char	**result;
+	size_t	start;
+	size_t	end;
+	size_t	word_index;
+
 	i = 0;
-	size_t word_count;
 	word_count = 0;
 	while (s[i] != '\0')
 	{
@@ -28,14 +33,9 @@ char	**ft_split(char const *s, char c)
 			word_count++;
 		i++;
 	}
-	char **result;
 	result = (char **)malloc((word_count + 1) * sizeof(char *));
 	if (!result)
 		return (NULL);
-
-	size_t start;
-	size_t end;
-	size_t word_index;
 	word_index = 0;
 	i = 0;
 	while (s[i] != '\0')
@@ -43,7 +43,6 @@ char	**ft_split(char const *s, char c)
 		if (s[i] != c)
 		{
 			start = i;
-
 			while (s[i] != c && s[i] != '\0')
 			{
 				i++;
@@ -71,8 +70,8 @@ char	**ft_split(char const *s, char c)
 	result[word_index] = NULL;
 	return (result);
 }
-
-int main ()
+/*
+int	main(void)
 {
 	char *s = "Hola, como estas?";
 	char **result = ft_split(s, ' ');
@@ -84,3 +83,4 @@ int main ()
 	}
 	return (0);
 }
+*/
