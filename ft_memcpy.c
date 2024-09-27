@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 14:54:13 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/27 14:52:07 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/27 16:10:59 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,19 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
+/*
+int main()
+{
+	char	src[] = "Hello World";
+	char	dest[11];
+	char	*ptr;
+
+	ptr = ft_memcpy(dest, src, 11);
+	if (ptr != NULL)
+		printf("Copied string: %s\n", dest);
+	else
+		printf("Error copying string\n");
+	return (0);
+}
+*/
