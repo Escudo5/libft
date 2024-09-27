@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:53:46 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/27 15:09:22 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/27 16:31:01 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,17 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	}
 	dest[dest_len + i] = '\0';
 	return (dest_len + src_len);
+}
+
+#include <stdio.h>
+int	main()
+{
+	const char src[] = "dawkndñkab";
+	char dest[30];
+	size_t i = 6;
+	size_t  result;
+	char *ptr;
+	result = ft_strlcat(dest, src, i);
+	printf("%zu", result);
+	return (0);
 }
