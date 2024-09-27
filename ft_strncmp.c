@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 15:49:51 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/27 15:15:28 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/27 16:42:57 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,17 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+
+/*
+#include <stdio.h>
+int main()
+{
+	const char s1[] = "Hello world";
+	const char s2[] = "Hello word";
+	size_t i = 16;
+	int restult;
+	restult = ft_strncmp(s1, s2, i);
+	printf("%d", restult);
+	return (0);
+}
+*/

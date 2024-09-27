@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 14:45:55 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/27 15:17:59 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/27 16:53:28 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,20 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		len--;
 	}
 	return (NULL);
+}
+
+#include <unistd.h>
+
+int main()
+{
+	const char big[] = "Hello World";
+	const char little[] = "wor";
+	size_t len = 6;
+	char *ptr;
+	ptr = ft_strnstr(big, little, len);
+	if (ptr != NULL)
+		write(1, ptr, 5);
+	else
+		write(1, "Not found", 9);
+	return (0);
 }
