@@ -5,77 +5,76 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/24 15:43:12 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/27 15:01:13 by smarquez         ###   ########.fr       */
+/*   Created: 2024/09/30 10:03:27 by smarquez          #+#    #+#             */
+/*   Updated: 2024/09/30 10:35:18 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <string.h>
+
+static size_t	count_words(const char *s, char c)
+{
+	size_t	count;
+
+	count = 0;
+	while (*s)
+	{
+		while (*s == c && *s)
+			s++;
+		if (*s && *s != c)
+		{
+			count++;
+			while (*s && *s != c)
+				s++;
+		}
+	}
+	return (count);
+}
+
+static char	*get_next_word(const char *s, char c)
+{
+	size_t	len;
+
+	len = 0;
+	while (s[len] && s[len] != c)
+		len++;
+	return (ft_substr(s, 0, len));
+}
 
 char	**ft_split(char const *s, char c)
 {
 	size_t	i;
-	size_t	word_count;
+	size_t	words;
 	char	**result;
-	size_t	start;
-	size_t	end;
-	size_t	word_index;
 
 	i = 0;
-	word_count = 0;
-	while (s[i] != '\0')
-	{
-		if (i == 0 && s[i] != c)
-			word_count++;
-		if (i > 0 && s[i] != c && s[i - 1] == c)
-			word_count++;
-		i++;
-	}
-	result = (char **)malloc((word_count + 1) * sizeof(char *));
-	if (!result)
+	words = count_words(s, c);
+	result = malloc((words + 1) * sizeof(char *));
+	if (!result || !s)
 		return (NULL);
-	word_index = 0;
-	i = 0;
-	while (s[i] != '\0')
+	while (*s && i < words)
 	{
-		if (s[i] != c)
-		{
-			start = i;
-			while (s[i] != c && s[i] != '\0')
-			{
-				i++;
-			}
-			end = i;
-			result[word_index] = (char *)malloc((end - start + 1)
-					* sizeof(char));
-			if (!result[word_index])
-			{
-				while (word_index > 0)
-				{
-					free(result[--word_index]);
-				}
-				free(result);
-				return (NULL);
-			}
-			ft_strlcpy(result[word_index], &s[start], end - start + 1);
-			word_index++;
-		}
-		else
-		{
-			i++;
-		}
+		while (*s == c && *s)
+			s++;
+		if (*s)
+			result[i++] = get_next_word(s, c);
+		while (*s && *s != c)
+			s++;
 	}
-	result[word_index] = NULL;
+	result[i] = NULL;
 	return (result);
 }
-/*
+
 int	main(void)
 {
-	char *s = "Hola, como estas?";
-	char **result = ft_split(s, ' ');
-	int i = 0;
+	char	*s;
+	char	**result;
+	int		i;
+
+	s = "Hola, como estas?";
+	result = ft_split(s, ' ');
+	i = 0;
 	while (result[i] != NULL)
 	{
 		printf("%s\n", result[i]);
@@ -83,4 +82,3 @@ int	main(void)
 	}
 	return (0);
 }
-*/
