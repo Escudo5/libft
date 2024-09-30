@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 12:56:43 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/30 13:47:51 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/30 16:30:33 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!lst || !new)
-		return ;
+		return;
 	new->next = *lst;
 	*lst = new;
 }
