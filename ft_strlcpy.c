@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:43:00 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/27 16:36:54 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/30 10:54:02 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ int main()
 	char dest[30];
 	size_t i = 6;
 	size_t  result;
-	char *ptr;
 	result = ft_strlcpy(dest, src, i);
 	printf("%zu", result);
 	return (0);

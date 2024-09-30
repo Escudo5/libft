@@ -6,12 +6,13 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 10:03:27 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/30 10:35:18 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/30 10:52:02 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 static size_t	count_words(const char *s, char c)
 {

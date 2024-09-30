@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:53:46 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/27 16:31:01 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/30 11:11:19 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ int	main()
 	char dest[30];
 	size_t i = 6;
 	size_t  result;
-	char *ptr;
 	result = ft_strlcat(dest, src, i);
 	printf("%zu", result);
 	return (0);
