@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:43:00 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/30 10:54:02 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/30 11:15:36 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	dest[i] = '\0';
 	return (ft_strlen(src));
 }
-
+/*
 #include <stdio.h>
 int main()
 {
@@ -40,3 +40,4 @@ int main()
 	printf("%zu", result);
 	return (0);
 }
+*/

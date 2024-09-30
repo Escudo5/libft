@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 14:45:55 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/27 16:53:28 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/09/30 11:15:00 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (NULL);
 }
 
-#include <unistd.h>
+/*
 
 int main()
 {
@@ -51,3 +51,4 @@ int main()
 		write(1, "Not found", 9);
 	return (0);
 }
+*/
