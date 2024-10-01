@@ -6,44 +6,44 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 14:45:55 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/30 11:15:00 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/10/01 10:17:59 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
+#include <string.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
+	size_t	j;
 
 	if (*little == '\0')
 		return ((char *)big);
-	if (len == 0)
-		return (NULL);
 	i = 0;
-	while (i != '\0')
+	while (big[i] && i < len)
 	{
-		while (little[i] && big[i] == little[i] && i < len)
-		{
-			i++;
-		}
-		if (little[i] == '\0' && i <= len)
-			return ((char *)big);
-		big++;
-		len--;
+		j = 0;
+		while (little[j] && big[i + j] && (i + j) < len && big[i
+				+ j] == little[j])
+			j++;
+		if (little[j] == '\0')
+			return ((char *)&big[i]);
+		i++;
 	}
 	return (NULL);
 }
 
 /*
 
-int main()
+int	main(void)
 {
-	const char big[] = "Hello World";
-	const char little[] = "wor";
-	size_t len = 6;
-	char *ptr;
+	const char	big[] = "Hello World";
+	const char	little[] = "wor";
+	size_t		len;
+	char		*ptr;
+
+	len = 6;
 	ptr = ft_strnstr(big, little, len);
 	if (ptr != NULL)
 		write(1, ptr, 5);

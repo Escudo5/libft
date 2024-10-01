@@ -6,10 +6,11 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 15:09:06 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/27 14:34:16 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/10/01 10:27:49 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
 
 int	ft_atoi(const char *nptr)
@@ -17,7 +18,8 @@ int	ft_atoi(const char *nptr)
 	int	sign;
 	int	result;
 
-	while (*nptr == ' ')
+	while (*nptr == ' ' || *nptr == '\t' || *nptr == '\n' || *nptr == '\v'
+		|| *nptr == '\f' || *nptr == '\r')
 		nptr++;
 	sign = 1;
 	if (*nptr == '-')
@@ -26,9 +28,7 @@ int	ft_atoi(const char *nptr)
 		nptr++;
 	}
 	else if (*nptr == '+')
-	{
 		nptr++;
-	}
 	result = 0;
 	while (*nptr >= '0' && *nptr <= '9')
 	{
@@ -42,8 +42,9 @@ int	ft_atoi(const char *nptr)
 
 int	main(void)
 {
-	const char s1[] = "  p      -86p75";
-	int result;
+	const char	s1[] = "  p      -86p75";
+	int			result;
+
 	result = ft_atoi(s1);
 	printf("%d", result);
 	return (0);

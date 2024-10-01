@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:20:10 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/27 16:12:41 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/10/01 10:47:31 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,18 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char		*d;
 	const unsigned char	*s;
 
+	if (!dest && !src)
+		return (NULL);
 	d = (unsigned char *)dest;
 	s = (const unsigned char *)src;
 	if (d == s)
 		return (dest);
-	if (d < s || d >= s + n)
+	if (d < s)
 	{
 		while (n--)
 			*d++ = *s++;
 	}
-	else
+	else if (d > s)
 	{
 		d += n;
 		s += n;
@@ -39,7 +41,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 /*
 #include <stdio.h>
-int	main()
+
+int	main(void)
 {
 	char	src[] = "Hello World";
 	char	dest[11];
