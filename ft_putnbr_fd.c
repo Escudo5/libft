@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 11:38:23 by smarquez          #+#    #+#             */
-/*   Updated: 2024/10/01 16:56:52 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/10/01 16:59:13 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,9 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd('-', fd);
 		n = -n;
 	}
-	if (n == 0)
-	{
-		ft_putchar_fd('0', fd);
-		return ;
-	}
-	if (n > 0)
+	if (n >= 10)
 	{
 		ft_putnbr_fd(n / 10, fd);
 	}
-	ft_putnbr_fd(n % 10 + '0', fd);
+	ft_putchar_fd((n % 10) + '0', fd);
 }
