@@ -1,3 +1,5 @@
+NAME = libft.a
+
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
@@ -11,9 +13,9 @@ SRCS = ft_atoi.c ft_isdigit.c ft_memmove.c ft_split.c ft_strlcpy.c ft_strtrim.c 
 
 OBJS = $(SRCS:.c=.o)
 
-all: libft.a
+all: $(NAME)
 
-libft.a: $(OBJS)
+$(NAME): $(OBJS)
 	ar rcs $@ $(OBJS)
 
 %.o: %.c
@@ -23,6 +25,6 @@ clean:
 	rm -f $(OBJS)
 
 fclean: clean
-	rm -f libft.a
+	rm -f $(NAME)
 
 re: fclean all
