@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 12:25:15 by smarquez          #+#    #+#             */
-/*   Updated: 2024/10/02 16:50:59 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/10/03 10:10:04 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*temp;
 
-	if (!*lst || !del)
+	if (!lst || !del)
 		return ;
-	while ((*lst)->next != NULL)
+	while (*lst != NULL)
 	{
 		temp = (*lst)->next;
 		del((*lst)->content);

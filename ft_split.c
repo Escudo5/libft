@@ -6,13 +6,28 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 10:03:27 by smarquez          #+#    #+#             */
-/*   Updated: 2024/10/01 17:21:19 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/10/03 13:09:18 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
+
+static char	**ft_free(char **result, size_t fail_pos)
+{
+	size_t		i;
+
+	if (fail_pos > 0)
+	{
+		i = fail_pos - 1;
+		while (i > 0)
+		{
+			free (result[i--]);
+		}
+		free(result[0]);
+	}
+	free(result);
+	return (NULL);
+}
 
 static size_t	count_words(const char *s, char c)
 {
@@ -49,36 +64,44 @@ char	**ft_split(char const *s, char c)
 	size_t	words;
 	char	**result;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	words = count_words(s, c);
 	result = malloc((words + 1) * sizeof(char *));
-	if (!result || !s)
+	if (!result)
 		return (NULL);
 	while (*s && i < words)
 	{
 		while (*s == c && *s)
 			s++;
 		if (*s)
+		{
 			result[i++] = get_next_word(s, c);
+			if (!result [i - 1])
+				return (ft_free(result, i - 1));
+		}
 		while (*s && *s != c)
 			s++;
 	}
-	result[i] = NULL;
-	return (result);
+	return (result[i] = NULL, result);
 }
 /*
+#include <stdio.h>
 int	main(void)
 {
-	char	*s;
+	const char *s;
+	s = "Hola Mudo que tal";
+	char c;
+	c = ' ';
 	char	**result;
-	int		i;
-
-	s = "Hola, como estas?";
-	result = ft_split(s, ' ');
+	int i;
 	i = 0;
+
+	result = ft_split(s, c);
 	while (result[i] != NULL)
 	{
-		printf("%s\n", result[i]);
+		printf("%s \n", result[i]);
 		i++;
 	}
 	return (0);
