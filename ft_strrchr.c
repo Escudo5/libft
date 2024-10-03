@@ -6,11 +6,10 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 15:24:41 by smarquez          #+#    #+#             */
-/*   Updated: 2024/10/02 10:06:36 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/10/03 15:48:24 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)

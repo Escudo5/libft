@@ -6,12 +6,11 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 17:46:13 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/27 15:03:52 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/10/03 15:48:39 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {

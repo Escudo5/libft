@@ -6,12 +6,11 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:20:10 by smarquez          #+#    #+#             */
-/*   Updated: 2024/10/01 10:47:31 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/10/03 15:48:35 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

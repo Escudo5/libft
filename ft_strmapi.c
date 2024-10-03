@@ -6,12 +6,11 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 09:51:32 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/27 15:14:34 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/10/03 15:48:22 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

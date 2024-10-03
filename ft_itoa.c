@@ -6,14 +6,11 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 16:20:07 by smarquez          #+#    #+#             */
-/*   Updated: 2024/10/03 13:58:13 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/10/03 15:49:03 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <string.h>
-// Add this line to include the header file that declares ft_strdup
 
 static int	ft_count_length(int n)
 {

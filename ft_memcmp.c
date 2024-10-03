@@ -6,12 +6,10 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 14:20:22 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/27 14:48:31 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/10/03 15:49:38 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stddef.h>
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)

@@ -6,13 +6,11 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 11:25:07 by smarquez          #+#    #+#             */
-/*   Updated: 2024/09/27 14:55:43 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/10/03 15:48:15 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
-#include <unistd.h>
 
 void	ft_putendl_fd(char *s, int fd)
 {
