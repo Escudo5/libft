@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 16:20:07 by smarquez          #+#    #+#             */
-/*   Updated: 2024/10/03 15:49:03 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/10/04 15:37:00 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ static int	ft_count_length(int n)
 	}
 	return (len);
 }
-char	*ft_strdup(const char *s);
 
 char	*ft_itoa(int n)
 {
@@ -60,7 +59,7 @@ char	*ft_itoa(int n)
 int	main(void)
 {
 	int n;
-	n = 15547468;
+	n = 2147483647;
 	printf("%s\n", ft_itoa(n));
 	return (0);
 }
