@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 16:41:25 by smarquez          #+#    #+#             */
-/*   Updated: 2024/10/04 15:33:59 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/10/07 10:19:23 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t	total_size;
 	void	*ptr;
 
+	if (size != 0 && nmemb > SIZE_MAX / size)
+		return (NULL);
 	total_size = nmemb * size;
 	ptr = malloc(total_size);
 	if (ptr == NULL)
