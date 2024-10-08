@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 10:31:07 by smarquez          #+#    #+#             */
-/*   Updated: 2024/10/08 13:57:25 by smarquez         ###   ########.fr       */
+/*   Updated: 2024/10/08 13:59:31 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 char				*ft_strnstr(const char *big, const char *little,
 						size_t len);
 int					ft_atoi(const char *str);
-void				*ft_calloc(size_t count, size_t size);
+void				*ft_calloc(size_t nmemb, size_t size);
 char				*ft_strdup(const char *s1);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
